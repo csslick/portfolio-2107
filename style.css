@@ -9,9 +9,16 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   color: #333;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 ul {
@@ -24,28 +31,32 @@ a {
 
 p {
   line-height: 1.6em;
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 48px;
   margin-bottom: 40px;
+  font-weight: 300;
 }
 
 h3 {
   font-size: 32px;
   margin-bottom: 20px;
+  font-weight: 300;
 }
 
 section {
   width: 75%;
-  background: #ccc;
+  /* background: #ccc; */
+  background: var(--main-color);
   overflow: hidden;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
 }
 
 
 .container {
-  padding: 80px 30px;
+  padding: 40px 30px;
 }
 
 .circle {
@@ -61,7 +72,7 @@ section {
   position: fixed;
   width: 100%;
   z-index: 999;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  /* border-bottom: 1px solid rgba(0,0,0,0.1); */
 }
 
 #main_header h1 {
@@ -77,6 +88,7 @@ section {
   right: 0;
   top: 80px;
   /* background: #abc; */
+  background: var(--main-color);
   border-bottom: 1px solid rgba(0,0,0,0.2);
   width: 25%;
   height: calc(100vh - 80px);
@@ -104,15 +116,16 @@ section {
 }
 
 #gnb > ul > li > a {
-  color: #666;
+  color: rgba(0,0,0,0.4);
   font-size: 24px;
 }
 
 #home {
   height: calc(100vh - 80px);
 }
-#about, #skills, #prohects, #contact {
-  height: 100vh;
+#about, #skills, #projects, #contact {
+  min-height: 100vh;
+  padding-top: 80px; /* 상단 헤더 높이 만큼 */
 }
 
 #home {
@@ -137,7 +150,7 @@ section {
   /* left: 0; bottom: 0; */
   display: block;
   width: 100px; height: 4px;
-  background: #000;
+  background: #333;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -148,10 +161,27 @@ section {
 #about ul {
   list-style-type: circle;
   list-style-position: inside;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   line-height: 2rem;
 }
 
-#skills {
-  
+#skills{
+
+}
+
+#skills .skillGroup {
+  display: flex;
+}
+
+#skills .skillGroup > ul {
+  flex: 1;
+}
+
+#skills .skillGroup > ul > li{
+  padding: 0 15px 15px;
+}
+
+#skills ul > li > b {
+  display: inline-block;
+  margin-bottom: 10px;
 }
