@@ -101,6 +101,7 @@ section {
   font-weight: bold;
   border-left: 3px solid rgba(0,0,0,0.3);
   padding: 10px 20px;
+  transition: 0.4s;
 }
 
 /* GNB 보더 효과 */
