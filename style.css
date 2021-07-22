@@ -1,0 +1,157 @@
+:root {
+  --main-color: #ffdb67;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+section {
+  width: 75%;
+  background: #ccc;
+  overflow: hidden;
+  border-bottom: 2px solid #000;
+}
+
+
+.container {
+  padding: 80px 30px;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+#main_header {
+  background: var(--main-color);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#main_header h1 {
+  font-size: 24px;
+}
+
+#main_header h1 > a {
+  color: #333;
+}
+
+#gnb {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  /* background: #abc; */
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  width: 25%;
+  height: calc(100vh - 80px);
+  padding-top: 40px;
+}
+
+#gnb > ul > li {
+  /* margin-bottom: 20px; */
+  text-transform: uppercase;
+  font-weight: bold;
+  border-left: 3px solid rgba(0,0,0,0.3);
+  padding: 10px 20px;
+}
+
+/* GNB 보더 효과 */
+#gnb > ul > li.active,
+#gnb > ul > li:hover {
+  border-color: rgba(0,0,0, 75);
+}
+
+/* GNB 글자 효과 */
+#gnb > ul > li.active > a,
+#gnb > ul > li:hover > a{
+  color: #333;
+}
+
+#gnb > ul > li > a {
+  color: #666;
+  font-size: 24px;
+}
+
+#home {
+  height: calc(100vh - 80px);
+}
+#about, #skills, #prohects, #contact {
+  height: 100vh;
+}
+
+#home {
+  background: var(--main-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  box-sizing: content-box;
+}
+
+#home h2 {
+  position: relative;
+  font-size: 100px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+#home h2:after {
+  content: '';
+  /* position: absolute; */
+  /* left: 0; bottom: 0; */
+  display: block;
+  width: 100px; height: 4px;
+  background: #000;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#home .container {
+ /* outline: 1px solid red;  */
+}
+
+#about ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-bottom: 30px;
+  line-height: 2rem;
+}
+
+#skills {
+  
+}
